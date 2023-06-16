@@ -56,13 +56,13 @@
     </style>
   </head>
   <body>
-    <h1>Enter Input</h1>
+    <h1>Leetcode Problems Search Engine</h1>
     <form method="POST" action="/">
       <input class="search_box" type="text" name="input_field" required />
       <input class="submit_button" type="submit" value="Submit" />
     </form>
 
-    <h1>Results</h1>
+    <h1>Results found!</h1>
     <ul class="results">
       {% for result in results %}
       <li>{{ ' '.join(result['Question name'])}}</li>
