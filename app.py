@@ -90,7 +90,7 @@ def calculate_sorted_order_of_documents(query_terms):
         sorted(potential_documents.items(), key=lambda item: item[1], reverse=True))
     if (len(potential_documents) == 0):
         results = []
-        results.append({"Question name": ['No','Results','found',':('], "Score": 10})
+        # results.append({"Question name": ['No','Results','Found',':('], "Score": 10})
         return results
     else:
         # print(potential_documents)

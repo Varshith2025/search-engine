@@ -5,6 +5,11 @@
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
     <!-- <link rel="stylesheet" href="style.css" /> -->
     <style>
+      .header{
+        text-align: center;
+        font-size: 50px;
+        color: gold;
+      }
       body {
         background-color: rgb(77, 120, 133);
         color: gold;
@@ -56,16 +61,19 @@
     </style>
   </head>
   <body>
-    <h1>Leetcode Problems Search Engine</h1>
+    <h1 class="header">Leetcode Problems Search Engine</h1>
     <form method="POST" action="/">
       <input class="search_box" type="text" name="input_field" required />
       <input class="submit_button" type="submit" value="Submit" />
     </form>
-
-    <h1>Results found!</h1>
+    {% if results %}
+          <h1>Results Found &#128526;</h1>
+    {% else %}
+          <h1>No Results Found &#128532; type something from Leetcode problem names</h1>
+    {% endif %}
     <ul class="results">
       {% for result in results %}
-      <li>{{ ' '.join(result['Question name'])}}</li>
+          <li>{{ ' '.join(result['Question name'])}}</li>
       {% endfor %}
     </ul>
   </body>
