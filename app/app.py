@@ -4,8 +4,8 @@ import re
 from flask import jsonify, request
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
-
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'your-secret-key'
 # print
 
 
@@ -136,5 +136,5 @@ def index():
         return render_template('form.html')
 
 
-if __name__ == '__main__':
-    app.run(port=5001)
+# if __name__ == '__main__':
+#     app.run(port=5001)
