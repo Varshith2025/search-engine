@@ -5,7 +5,7 @@ from flask import jsonify, request
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'your-secret-key'
+# app.config['SECRET_KEY'] = 'your-secret-key'
 # print
 
 
